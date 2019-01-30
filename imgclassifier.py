@@ -33,7 +33,7 @@ class ImageClassifier:
         for pic in data:
             image = color.rgb2gray(pic)
             newimg = filters.gaussian(image, sigma = 3)
-            ImgFeature = feature.hog(newimg, block_norm = "L2-Hys", orientations = 7, pixels_per_cell = (36,36), cells_per_block = (5,5))
+            ImgFeature = feature.hog(newimg, block_norm = "L2-Hys", orientations = 7, pixels_per_cell = (35,35), cells_per_block = (5,5))
             feature_data.append(ImgFeature)
         return(feature_data)
 
