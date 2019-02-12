@@ -14,7 +14,6 @@ class ImageClassifier:
     def load_data_from_folder(self, dir):
         # read all images into an image collection
         ic = io.ImageCollection(dir+"*.bmp", load_func=self.imread_convert)
-        
         #create one large array of image data
         data = io.concatenate_images(ic)
         
